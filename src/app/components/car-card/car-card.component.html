@@ -1,0 +1,43 @@
+<div class="image-container">
+  <img src="{{ car.image }}" alt="{{ car.id }}" />
+</div>
+<div class="car-content">
+  <div class="car-title">
+    <h3 class="car-name">{{ car.bezeichnung }}</h3>
+    <data class="car-year">{{ car.datum }}</data>
+  </div>
+  <ul class="card-list">
+    <li class="card-list-item" id="group">
+      <span class="material-symbols-outlined">group</span>
+      <span class="card-item-text">{{ car.sitze }} Sitze</span>
+    </li>
+    <li class="card-list-item" id="tank">
+      <span class="material-symbols-outlined"> local_gas_station </span>
+      <span class="card-item-text">{{ car.tank }}</span>
+    </li>
+    <li class="card-list-item" id="consumption">
+      <span class="material-symbols-outlined"> speed </span>
+      <span class="card-item-text">{{ car.verbrauch }} km/l </span>
+    </li>
+    <li class="card-list-item" id="hardware">
+      <span class="material-symbols-outlined"> memory </span>
+      <span class="card-item-text">{{ car.getriebe }}</span>
+    </li>
+  </ul>
+</div>
+<div class="car-price-wrapper">
+  <p class="card-price"><strong>250€</strong> / Tag</p>
+  <div class="button-wrapper">
+    <div class="box">
+      <a class="button" href="#popup1">Details</a>
+    </div>
+    <div id="popup1" class="overlay">
+      <div class="popup">
+        <h2>Details</h2>
+        <a class="close" href="#">&times;</a>
+        <div class="content">Hier sind einige Details zum Auto...</div>
+      </div>
+    </div>
+    <button class="btn fill">JETZT MIETEN</button>
+  </div>
+</div>

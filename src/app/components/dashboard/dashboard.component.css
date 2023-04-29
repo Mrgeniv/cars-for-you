@@ -1,0 +1,21 @@
+.dashboard{
+  height: 800px;
+}
+.edit-card{
+  height: 450px;
+  width: 800px;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  text-decoration: #ffffff;
+}
+table{
+  justify-content: center;
+}
+
+table thead tr{
+  justify-content: center;
+}
+
+table tbody{
+  text-align: center;
+}
