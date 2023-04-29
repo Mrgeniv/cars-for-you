@@ -17,6 +17,7 @@ export const mockCarClassCollection: Array<string> = [
   'van',
   'elektrisch',
   'luxus',
+  'Hallloooooo'
 ];
 
 export const mockCarBrandsCollection: Array<string> = [
