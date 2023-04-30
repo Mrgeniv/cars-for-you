@@ -6,22 +6,22 @@ export function generateId(): number {
   return id;
 }
 export const carModelsArray: Array<Car['details']['model']> = [
-    CAR_MODEL.CABRIO, CAR_MODEL.ELEKTO, CAR_MODEL.LIMOUSINE, CAR_MODEL.KOMPAKT, CAR_MODEL.COUPE, CAR_MODEL.PICKUP, CAR_MODEL.KOMBI, CAR_MODEL.CABRIO, CAR_MODEL.SUV, CAR_MODEL.VAN
+    CAR_MODEL.CABRIO, CAR_MODEL.ELEKTRO, CAR_MODEL.LIMOUSINE, CAR_MODEL.KOMPAKT, CAR_MODEL.COUPE, CAR_MODEL.PICKUP, CAR_MODEL.KOMBI, CAR_MODEL.CABRIO, CAR_MODEL.SUV, CAR_MODEL.VAN
 ];
 
 export const carArray: Array<Car> = [{
   id: 1,
-  image: 'https://bit.ly/3mcT32M',
+  image: 'https://bit.ly/3obVxil',
   details: {
     brand: CAR_BRANDS.MERCEDES,
     model: CAR_MODEL.COUPE,
     price: 50000,
     horsePower: 666,
-    seatsAmount: CAR_SITS.VIERSITZER,
+    seatsAmount: CAR_SITS.ZWEISITZER,
     transmissionType: CAR_TRANSMISSION.AUTOMATIK,
     fuelType: CAR_FUEL.BENZIN,
     series: 'S',
-    variant: '63',
+
     modifications: 'AMG',
     yearOfConstruction: CAR_CONSTRUCTIONYEAR.ZWEITAUSENDDREIUNDZWANZIG,
     fuelConsumptionRateInLiter: 35,
@@ -29,182 +29,182 @@ export const carArray: Array<Car> = [{
   }
 }, {
   id: 2,
-  image: 'https://bit.ly/3mcT32M',
+  image: 'https://bit.ly/3n73A04',
   details: {
-    brand: CAR_BRANDS.MERCEDES,
+    brand: CAR_BRANDS.BMW,
     model: CAR_MODEL.COUPE,
-    price: 50000,
-    horsePower: 666,
-    seatsAmount: CAR_SITS.VIERSITZER,
+    price: 400,
+    horsePower: 555,
+    seatsAmount: CAR_SITS.ZWEISITZER,
     transmissionType: CAR_TRANSMISSION.AUTOMATIK,
     fuelType: CAR_FUEL.BENZIN,
-    series: 'S',
-    variant: '63',
-    modifications: 'AMG',
-    yearOfConstruction: CAR_CONSTRUCTIONYEAR.ZWEITAUSENDDREIUNDZWANZIG,
-    fuelConsumptionRateInLiter: 35,
-    placeOfRental: 'Köln'
+    series: '4',
+    variant: 'Competition',
+   
+    yearOfConstruction: CAR_CONSTRUCTIONYEAR.ZWEITAUSENDZWANZIG,
+    fuelConsumptionRateInLiter: 40,
+    placeOfRental: 'Bremen'
   }
 }, {
   id: 3,
-  image: 'https://bit.ly/3mcT32M',
+  image: 'https://bit.ly/3moybpv',
   details: {
     brand: CAR_BRANDS.MERCEDES,
-    model: CAR_MODEL.COUPE,
-    price: 50000,
-    horsePower: 666,
-    seatsAmount: CAR_SITS.VIERSITZER,
+    model: CAR_MODEL.VAN,
+    price: 300,
+    horsePower: 333,
+    seatsAmount: CAR_SITS.SIEBENSITZER,
     transmissionType: CAR_TRANSMISSION.AUTOMATIK,
-    fuelType: CAR_FUEL.BENZIN,
-    series: 'S',
-    variant: '63',
-    modifications: 'AMG',
-    yearOfConstruction: CAR_CONSTRUCTIONYEAR.ZWEITAUSENDDREIUNDZWANZIG,
-    fuelConsumptionRateInLiter: 35,
+    fuelType: CAR_FUEL.HYBRID,
+    series: 'Vito',
+   
+    yearOfConstruction: CAR_CONSTRUCTIONYEAR.ZWEITAUSENDEINUNDZWANZIG,
+    fuelConsumptionRateInLiter: 33,
     placeOfRental: 'Köln'
   }
 }, {
   id: 4,
-  image: 'https://bit.ly/3mcT32M',
+  image: 'https://bit.ly/3UzgFLH',
   details: {
-    brand: CAR_BRANDS.MERCEDES,
-    model: CAR_MODEL.COUPE,
-    price: 50000,
+    brand: CAR_BRANDS.AUDI,
+    model: CAR_MODEL.SUV,
+    price: 700,
     horsePower: 666,
     seatsAmount: CAR_SITS.VIERSITZER,
     transmissionType: CAR_TRANSMISSION.AUTOMATIK,
     fuelType: CAR_FUEL.BENZIN,
-    series: 'S',
-    variant: '63',
-    modifications: 'AMG',
+    series: 'Q',
+    variant: '5',
+    modifications: 'S',
     yearOfConstruction: CAR_CONSTRUCTIONYEAR.ZWEITAUSENDDREIUNDZWANZIG,
     fuelConsumptionRateInLiter: 35,
     placeOfRental: 'Köln'
   }
 }, {
   id: 5,
-  image: 'https://bit.ly/3mcT32M',
+  image: 'https://bit.ly/417Plqo',
   details: {
-    brand: CAR_BRANDS.MERCEDES,
+    brand: CAR_BRANDS.AUDI,
     model: CAR_MODEL.COUPE,
-    price: 50000,
-    horsePower: 666,
+    price: 500,
+    horsePower: 544,
     seatsAmount: CAR_SITS.VIERSITZER,
     transmissionType: CAR_TRANSMISSION.AUTOMATIK,
     fuelType: CAR_FUEL.BENZIN,
-    series: 'S',
-    variant: '63',
-    modifications: 'AMG',
+    series: 'A',
+    variant: '8',
+    modifications: 'RS',
     yearOfConstruction: CAR_CONSTRUCTIONYEAR.ZWEITAUSENDDREIUNDZWANZIG,
     fuelConsumptionRateInLiter: 35,
-    placeOfRental: 'Köln'
+    placeOfRental: 'Berlin'
   }
 }, {
   id: 6,
-  image: 'https://bit.ly/3mcT32M',
+  image: 'https://bit.ly/41pzN0V',
   details: {
-    brand: CAR_BRANDS.MERCEDES,
-    model: CAR_MODEL.COUPE,
-    price: 50000,
-    horsePower: 666,
+    brand: CAR_BRANDS.OPEL,
+    model: CAR_MODEL.SUV,
+    price: 350,
+    horsePower: 222,
     seatsAmount: CAR_SITS.VIERSITZER,
     transmissionType: CAR_TRANSMISSION.AUTOMATIK,
-    fuelType: CAR_FUEL.BENZIN,
-    series: 'S',
-    variant: '63',
-    modifications: 'AMG',
-    yearOfConstruction: CAR_CONSTRUCTIONYEAR.ZWEITAUSENDDREIUNDZWANZIG,
+    fuelType: CAR_FUEL.ELEKTRO,
+    series: 'Crossland',
+    variant: 'X',
+
+    yearOfConstruction: CAR_CONSTRUCTIONYEAR.ZWEITAUSENDACHTZEHN,
     fuelConsumptionRateInLiter: 35,
     placeOfRental: 'Köln'
   }
 }, {
   id: 7,
-  image: 'https://bit.ly/3mcT32M',
+  image: 'https://bit.ly/41qjK2O',
   details: {
-    brand: CAR_BRANDS.MERCEDES,
+    brand: CAR_BRANDS.BMW,
     model: CAR_MODEL.COUPE,
-    price: 50000,
-    horsePower: 666,
+    price: 544,
+    horsePower: 900,
     seatsAmount: CAR_SITS.VIERSITZER,
-    transmissionType: CAR_TRANSMISSION.AUTOMATIK,
+    transmissionType: CAR_TRANSMISSION.MAUNELL,
     fuelType: CAR_FUEL.BENZIN,
-    series: 'S',
-    variant: '63',
-    modifications: 'AMG',
-    yearOfConstruction: CAR_CONSTRUCTIONYEAR.ZWEITAUSENDDREIUNDZWANZIG,
-    fuelConsumptionRateInLiter: 35,
-    placeOfRental: 'Köln'
+    series: '5',
+
+    modifications: 'M',
+
+    yearOfConstruction: CAR_CONSTRUCTIONYEAR.ZWEITAUSENDFUENFZEHN,
+    fuelConsumptionRateInLiter: 12,
+    placeOfRental: 'Bremen'
   },
 }, {
   id: 8,
   image: 'https://bit.ly/3mcT32M',
   details: {
-    brand: CAR_BRANDS.MERCEDES,
-    model: CAR_MODEL.COUPE,
-    price: 50000,
-    horsePower: 666,
+    brand: CAR_BRANDS.VW,
+    model: CAR_MODEL.KOMPAKT,
+    price: 150,
+    horsePower: 321,
     seatsAmount: CAR_SITS.VIERSITZER,
     transmissionType: CAR_TRANSMISSION.AUTOMATIK,
-    fuelType: CAR_FUEL.BENZIN,
-    series: 'S',
-    variant: '63',
-    modifications: 'AMG',
-    yearOfConstruction: CAR_CONSTRUCTIONYEAR.ZWEITAUSENDDREIUNDZWANZIG,
-    fuelConsumptionRateInLiter: 35,
-    placeOfRental: 'Köln'
+    fuelType: CAR_FUEL.ELEKTRO,
+    series: 'Golf',
+    variant: 'GTE',
+  
+    yearOfConstruction: CAR_CONSTRUCTIONYEAR.ZWEITAUSENDNEUN,
+    fuelConsumptionRateInLiter: 10,
+    placeOfRental: 'Bremen'
   }
 }, {
   id: 9,
-  image: 'https://bit.ly/3mcT32M',
+  image: 'https://bit.ly/4148wkI',
   details: {
-    brand: CAR_BRANDS.MERCEDES,
-    model: CAR_MODEL.COUPE,
+    brand: CAR_BRANDS.TESLA,
+    model: CAR_MODEL.ELEKTRO,
     price: 50000,
     horsePower: 666,
     seatsAmount: CAR_SITS.VIERSITZER,
     transmissionType: CAR_TRANSMISSION.AUTOMATIK,
     fuelType: CAR_FUEL.BENZIN,
-    series: 'S',
-    variant: '63',
-    modifications: 'AMG',
+    series: 'Model',
+    variant: 'Y',
+
     yearOfConstruction: CAR_CONSTRUCTIONYEAR.ZWEITAUSENDDREIUNDZWANZIG,
-    fuelConsumptionRateInLiter: 35,
+    
     placeOfRental: 'Köln'
   }
 }, {
   id: 10,
-  image: 'https://bit.ly/3mcT32M',
+  image: 'https://bit.ly/3Gl7gSb',
   details: {
-    brand: CAR_BRANDS.MERCEDES,
-    model: CAR_MODEL.COUPE,
-    price: 50000,
+    brand: CAR_BRANDS.VW,
+    model: CAR_MODEL.SUV,
+    price: 90,
     horsePower: 666,
     seatsAmount: CAR_SITS.VIERSITZER,
     transmissionType: CAR_TRANSMISSION.AUTOMATIK,
-    fuelType: CAR_FUEL.BENZIN,
-    series: 'S',
-    variant: '63',
-    modifications: 'AMG',
+    fuelType: CAR_FUEL.ELEKTRO,
+    series: 'Tiguan',
+   
+    
     yearOfConstruction: CAR_CONSTRUCTIONYEAR.ZWEITAUSENDDREIUNDZWANZIG,
     fuelConsumptionRateInLiter: 35,
     placeOfRental: 'Köln'
   }
 }, {
   id: 11,
-  image: 'https://bit.ly/3mcT32M',
+  image: 'https://bit.ly/3KI5uMb',
   details: {
-    brand: CAR_BRANDS.MERCEDES,
-    model: CAR_MODEL.COUPE,
-    price: 50000,
-    horsePower: 666,
+    brand: CAR_BRANDS.MG,
+    model: CAR_MODEL.SUV,
+    price: 432,
+    horsePower: 34,
     seatsAmount: CAR_SITS.VIERSITZER,
     transmissionType: CAR_TRANSMISSION.AUTOMATIK,
-    fuelType: CAR_FUEL.BENZIN,
-    series: 'S',
-    variant: '63',
-    modifications: 'AMG',
-    yearOfConstruction: CAR_CONSTRUCTIONYEAR.ZWEITAUSENDDREIUNDZWANZIG,
-    fuelConsumptionRateInLiter: 35,
-    placeOfRental: 'Köln'
+    fuelType: CAR_FUEL.HYBRID,
+    series: 'EHS',
+    
+
+    yearOfConstruction: CAR_CONSTRUCTIONYEAR.ZWEITAUSENDSECHS,
+    fuelConsumptionRateInLiter: 10,
+    placeOfRental: 'Berlin'
   }
 }];

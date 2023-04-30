@@ -16,10 +16,10 @@ export enum CAR_BRANDS {
 /* Serien */
 
 export type CAR_SERIES = VW_SERIES | AUDI_SERIES | OPEL_SERIES | MERCEDES_SERIES | BMW_SERIES | FIAT_SERIES | HYUNDAI_SERIES | TESLA_SERIES | POLESTAR_SERIES |MG_SERIES | LYNKCO_SERIES
-export type VW_SERIES = 'T-Roc' | 'Touran' | 'Golf'
+export type VW_SERIES = 'T-Roc' | 'Touran' | 'Golf' | 'Tiguan'
 export type AUDI_SERIES = 'Q' | 'A'
 export type MERCEDES_SERIES  = 'C' | 'Vito'| 'SL' | 'S'
-export type BMW_SERIES = 'M' | 'Z'
+export type BMW_SERIES = 'M' | 'Z' | '4' | '5'
 export type FIAT_SERIES = '500'
 export type OPEL_SERIES = 'Crossland'
 export type HYUNDAI_SERIES = 'I'
@@ -32,10 +32,10 @@ export type LYNKCO_SERIES = '01'
 /* Varianten */
 
 export type CAR_VARIANTS = VW_VARIANT | FIAT_VARIANT | MG_VARIANT | LYNKCO_VARIANT | AUDI_VARIANT | MERCEDES_VARIANT | BMW_VARIANT | OPEL_VARIANT | TESLA_VARIANT | HYUNDAI_VARIANT | POLESTAR_VARIANT
-export enum VW_VARIANT {}
+export type VW_VARIANT = 'GTE'
 export type AUDI_VARIANT = '5' | '8'
 export type MERCEDES_VARIANT = '166L' | '63';
-export type BMW_VARIANT = '5'
+export type BMW_VARIANT = '420' | 'Competition' 
 export enum FIAT_VARIANT {}
 export type OPEL_VARIANT = 'X'
 export type HYUNDAI_VARIANT = '30'
@@ -47,9 +47,9 @@ export enum LYNKCO_VARIANT {}
 /* Modifikation */
 export type CAR_MODS = POLESTAR_MOD | MG_MOD | LYNKCO_MOD | VW_MOD | AUDI_MOD | MERCEDES_MOD | TESLA_MOD | HYUNDAI_MOD | MERCEDES_MOD | BMW_MOD | FIAT_MOD | OPEL_MOD
 export type VW_MOD = '';
-export type AUDI_MOD ='';
+export type AUDI_MOD ='S' | 'RS';
 export type MERCEDES_MOD = 'AMG'
-export type BMW_MOD =''
+export type BMW_MOD ='M'
 export type FIAT_MOD =''
 export type OPEL_MOD =''
 export type HYUNDAI_MOD =''
@@ -67,7 +67,7 @@ export enum CAR_MODEL {
     KOMPAKT = 'Kompaktwagen',
     KOMBI = 'Kombi',
     PICKUP = 'Pick-Up',
-    ELEKTO = 'Elektowagen'
+    ELEKTRO = 'Elektrowagen'
 }
 
 export enum CAR_CONSTRUCTIONYEAR {
