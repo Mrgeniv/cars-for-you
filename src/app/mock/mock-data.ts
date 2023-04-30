@@ -1,5 +1,28 @@
-import {Car, CarBrand} from '../interfaces/car';
-import {AUDI_SERIES_ARRAY, BMW_SERIES, BMW_SERIES_ARRAY, CAR_BRANDS, CAR_CONSTRUCTIONYEAR, CAR_FUEL, CAR_MODEL, CAR_MODS, CAR_SERIES, CAR_SITS, CAR_TRANSMISSION, CAR_VARIANTS, CAR_VARIANTS_ARRAY, FIAT_SERIES_ARRAY, HYUNDAI_SERIES_ARRAY, LYNKCO_SERIES_ARRAY, MERCEDES_SERIES_ARRAY, MG_SERIES_ARRAY, POLESTAR_SERIES_ARRAY, TESLA_SERIES_ARRAY, VW_MOD_ARRAY, VW_SERIES_ARRAY} from "./enums";
+import {Car, CarBrand} from '../interfaces';
+import {
+  AUDI_SERIES_ARRAY,
+  BMW_SERIES,
+  BMW_SERIES_ARRAY,
+  CAR_BRANDS,
+  CAR_CONSTRUCTIONYEAR,
+  CAR_FUEL,
+  CAR_MODEL,
+  CAR_MODS,
+  CAR_SERIES,
+  CAR_SITS,
+  CAR_TRANSMISSION,
+  CAR_VARIANTS_ARRAY,
+  CarsData,
+  FIAT_SERIES_ARRAY,
+  HYUNDAI_SERIES_ARRAY,
+  LYNKCO_SERIES_ARRAY,
+  MERCEDES_SERIES_ARRAY,
+  MG_SERIES_ARRAY,
+  POLESTAR_SERIES_ARRAY, SeriesType,
+  TESLA_SERIES_ARRAY,
+  VW_MOD_ARRAY,
+  VW_SERIES_ARRAY
+} from "../types";
 
 export function generateId(): number {
   const id = Math.floor(Math.random() * 1000000);
@@ -9,9 +32,9 @@ export const carModelsArray: Array<Car['details']['model']> = [
     CAR_MODEL.CABRIO, CAR_MODEL.ELEKTRO, CAR_MODEL.LIMOUSINE, CAR_MODEL.KOMPAKT, CAR_MODEL.COUPE, CAR_MODEL.PICKUP, CAR_MODEL.KOMBI, CAR_MODEL.CABRIO, CAR_MODEL.SUV, CAR_MODEL.VAN
 ];
 
-export const data: Array<{brandId: CAR_BRANDS, series: Array<{seriesId: CAR_SERIES, variants: CAR_VARIANTS}>, mods: CAR_MODS | []}> = [
+export const data: CarsData = [
   {
-    brandId: CAR_BRANDS.VW, series: VW_SERIES_ARRAY,  mods: VW_MOD_ARRAY
+    brandId: CAR_BRANDS.VW, series: VW_SERIES_ARRAY, mods: VW_MOD_ARRAY
   }
 ]
 
@@ -51,7 +74,7 @@ export const allCarSeries: Array<AllCarSeriesArray> = [
   }
 ]
 
-export type AllCarSeriesArray = {id : CarBrand, series: Array<string>} 
+export type AllCarSeriesArray = {id : CarBrand, series: Array<SeriesType>}
 export const c = CAR_VARIANTS_ARRAY.map(brand => brand)
 
 export const carArray: Array<Car> = [{

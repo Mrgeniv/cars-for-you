@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import { Car, CarBrand } from '../interfaces/car';
-import { CAR_SERIES } from '../mock/enums';
+import { Car, CarBrand } from '../interfaces';
+import {CAR_SERIES, SeriesType} from '../types';
 import { allCarSeries, carArray, carModelsArray } from '../mock/mock-data';
 
 @Injectable()
@@ -27,7 +27,7 @@ export class CarService {
 
   }
 
-  getSeriesBasedOnBrand(carBrand: string) : Array<string> {
+  getSeriesBasedOnBrand(carBrand: string) : Array<SeriesType> {
     const seriesBasedOnBrand = allCarSeries.find(series => series.id == carBrand);
 
     return seriesBasedOnBrand.series

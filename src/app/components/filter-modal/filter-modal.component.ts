@@ -1,6 +1,6 @@
 import { Component, OnInit, OnChanges } from '@angular/core';
 import { c } from 'src/app/mock/mock-data';
-import { Car, CarBrand } from '../../interfaces/car';
+import { Car, CarBrand } from '../../interfaces';
 import { CarService } from '../../services/car.service';
 
 @Component({

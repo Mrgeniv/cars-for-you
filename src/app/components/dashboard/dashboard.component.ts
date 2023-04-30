@@ -1,5 +1,5 @@
-import { Component , OnInit } from '@angular/core';
-import { Car } from '../../interfaces/car';
+import { Component, Input, OnInit } from '@angular/core';
+import { Car } from '../../interfaces';
 import { CarService } from '../../services/car.service';
 
 @Component({
