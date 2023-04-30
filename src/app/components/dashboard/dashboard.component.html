@@ -20,10 +20,10 @@
     
       <tr *ngFor="let car of cars">
         <div  *ngIf="car.id === carToEdit; then thenBlock; else elseBlock"></div>
-        <td>
-          <ng-template #thenBlock><input type="text" value="{{car.id}}" /></ng-template>
-          <ng-template #elseBlock>{{ car.id }}</ng-template>
-        </td>
+
+        <ng-template #thenBlock><td><input type="text" value="{{car.id}}" /></td></ng-template>
+          <ng-template #elseBlock><td>{{ car.id }}</td></ng-template>
+
         
         <td><img src="{{ car.image }}" alt=""></td>
         <td>{{ car.details.brand }} {{ car.details.series }} {{ car.details.variant }} {{ car.details.modifications }} {{ car.details.model }}</td>
