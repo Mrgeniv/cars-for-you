@@ -17,8 +17,14 @@
       </tr>
     </thead>
     <tbody>
+    
       <tr *ngFor="let car of cars">
-        <td>{{car.id}}</td>
+        <div  *ngIf="car.id === carToEdit; then thenBlock; else elseBlock"></div>
+        <td>
+          <ng-template #thenBlock><input type="text" value="{{car.id}}" /></ng-template>
+          <ng-template #elseBlock>{{ car.id }}</ng-template>
+        </td>
+        
         <td><img src="{{ car.image }}" alt=""></td>
         <td>{{ car.details.brand }} {{ car.details.series }} {{ car.details.variant }} {{ car.details.modifications }} {{ car.details.model }}</td>
         <td>{{ car.details.yearOfConstruction | date:'dd.MM.yyyy' }}</td>
@@ -29,10 +35,11 @@
         <td>{{ car.details.price }}€</td>
         <td>{{ car.details.seatsAmount }}</td>
         <td>{{ car.details.placeOfRental }}</td>
-        <td><button class="material-icons" type="button" >edit</button></td>
-        <td><button class="material-icons" type="button" >delete</button></td>
-
+        <button class="material-icons" type="button" (click)="toggleEditMode(car.id)">edit</button>
+        <button class="material-icons" type="button" (click)="deleteCar(car)">delete</button>
       </tr>
+
+
     </tbody>
   </table>
 
