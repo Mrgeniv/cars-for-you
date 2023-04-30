@@ -116,13 +116,14 @@ button[type='submit']:hover {
 }
 
 .car-price-wrapper {
+  
 }
 
 .card-price {
-  color: #fff;
+  color: #ffffff;
   font-family: 'Lato', sans-serif;
   text-align: center;
-  font-size: 0.8rem;
+  font-size: 1.2rem;
   line-height: 150%;
   letter-spacing: 2px;
   text-transform: uppercase;

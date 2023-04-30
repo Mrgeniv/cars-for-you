@@ -15,7 +15,7 @@ export const carArray: Array<Car> = [{
   details: {
     brand: CAR_BRANDS.MERCEDES,
     model: CAR_MODEL.COUPE,
-    price: 50000,
+    price: 500,
     horsePower: 666,
     seatsAmount: CAR_SITS.ZWEISITZER,
     transmissionType: CAR_TRANSMISSION.AUTOMATIK,
@@ -159,7 +159,7 @@ export const carArray: Array<Car> = [{
   details: {
     brand: CAR_BRANDS.TESLA,
     model: CAR_MODEL.ELEKTRO,
-    price: 50000,
+    price: 600,
     horsePower: 666,
     seatsAmount: CAR_SITS.VIERSITZER,
     transmissionType: CAR_TRANSMISSION.AUTOMATIK,
