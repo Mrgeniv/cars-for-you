@@ -8,7 +8,7 @@ import { CarService } from '../../services/car.service';
   styleUrls: ['./filter-modal.component.css'],
 })
 export class FilterModalComponent implements OnInit {
-  carModels: Array<Car['model']>;
+  carModels: Array<Car['details']['model']>;
   constructor(private carService: CarService) {}
 
   ngOnInit() {
