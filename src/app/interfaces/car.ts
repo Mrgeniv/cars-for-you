@@ -1,19 +1,19 @@
-import { Preis } from './preis';
+import {
+   CAR_BRANDS,
+   CAR_CONSTRUCTIONYEAR,
+   CAR_FUEL,
+   CAR_MODEL,
+   CAR_MODS,
+   CAR_SERIES,
+   CAR_SITS, CAR_TRANSMISSION,
+   CAR_VARIANTS
+} from "../mock/enums";
 
-export class Car {
-  constructor(
-    public id: number,
-    public knz: string,
-    public bezeichnung: string,
-    public model: string,
-    public datum: number,
-    public tank: string,
-    public verbrauch: number,
-    public getriebe: string,
-    public ps: number,
-    public preis: Preis,
-    public sitze: number,
-    public ort: string,
-    public image?: string
-  ) {}
+type CarDetails = { model: CAR_MODEL, price: number, horsePower: number, seatsAmount: CAR_SITS, transmissionType: CAR_TRANSMISSION, fuelType: CAR_FUEL, brand: CAR_BRANDS, series: CAR_SERIES, variant?: CAR_VARIANTS, modifications?: CAR_MODS, yearOfConstruction: CAR_CONSTRUCTIONYEAR, fuelConsumptionRateInLiter?: number, placeOfRental?: string }
+
+export interface Car {
+   id: number,
+   details: CarDetails
+   knz?: string,
+   image?: string
 }
