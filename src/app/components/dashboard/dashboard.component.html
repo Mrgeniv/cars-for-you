@@ -1,32 +1,39 @@
-<table class="table table-striped table-bordered">
-  <thead class="thead-dark">
-    <tr>
-      <th scope="col">ID</th>
-      <th scope="col">Bild</th>
-      <th scope="col">Bezeichnung</th>
-      <th scope="col">Datum</th>
-      <th scope="col">Tank</th>
-      <th scope="col">Verbrauch</th>
-      <th scope="col">Getriebe</th>
-      <th scope="col">PS</th>
-      <th scope="col">Preis</th>
-      <th scope="col">Sitze</th>
-      <th scope="col">Ort</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let c of cars">
-      <td>{{c.id}}</td>
-      <td><img src="{{ c.image }}" alt="" width="50"></td>
-      <td>{{c.bezeichnung}}</td>
-      <td>{{c.datum | date:'dd.MM.yyyy'}}</td>
-      <td>{{c.tank}} l</td>
-      <td>{{c.verbrauch}} l/100km</td>
-      <td>{{c.getriebe}}</td>
-      <td>{{c.ps}} PS</td>
-      <td>{{c.preis}}</td>
-      <td>{{c.sitze}}</td>
-      <td>{{c.ort}}</td>
-    </tr>
-  </tbody>
-</table>
+
+<table>
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Bild</th>
+        <th scope="col">Bezeichnung</th>
+        <th scope="col">Zulassungsdatum</th>
+        <th scope="col">Tankart</th>
+        <th scope="col">Verbrauch l/100km</th>
+        <th scope="col">Getriebe</th>
+        <th scope="col">PS</th>
+        <th scope="col">Mietpreis</th>
+        <th scope="col">Anzahl Sitze</th>
+        <th scope="col">Abholung/Rückgabe</th>
+        
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let car of cars">
+        <td>{{car.id}}</td>
+        <td><img src="{{ car.image }}" alt=""></td>
+        <td>{{ car.details.brand }} {{ car.details.series }} {{ car.details.variant }} {{ car.details.modifications }} {{ car.details.model }}</td>
+        <td>{{ car.details.yearOfConstruction | date:'dd.MM.yyyy' }}</td>
+        <td>{{ car.details.fuelType }} l</td>
+        <td>{{ car.details.fuelConsumptionRateInLiter }} l/100km</td>
+        <td>{{ car.details.transmissionType }}</td>
+        <td>{{ car.details.horsePower }} PS</td>
+        <td>{{ car.details.price }}€</td>
+        <td>{{ car.details.seatsAmount }}</td>
+        <td>{{ car.details.placeOfRental }}</td>
+        <td><button class="material-icons" type="button" >edit</button></td>
+        <td><button class="material-icons" type="button" >delete</button></td>
+
+      </tr>
+    </tbody>
+  </table>
+
+

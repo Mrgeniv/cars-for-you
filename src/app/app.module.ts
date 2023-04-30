@@ -37,6 +37,7 @@ const appRoute: Routes = [
     GrunderComponent,
     MietenComponent,
     DashboardComponent,
+    FilterModalComponent
   ],
   bootstrap: [AppComponent],
   providers: [CarService],
