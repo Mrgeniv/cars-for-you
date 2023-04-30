@@ -13,50 +13,96 @@ export enum CAR_BRANDS {
     LYNKCO = 'Lynk & Co'
 }
 
-/* Serien */
+/* Modifikation */
+export type CAR_MODS = POLESTAR_MOD | MG_MOD | LYNKCO_MOD | VW_MOD | AUDI_MOD | MERCEDES_MOD | TESLA_MOD | HYUNDAI_MOD | MERCEDES_MOD | BMW_MOD | FIAT_MOD | OPEL_MOD
+export type VW_MOD = []
+export type AUDI_MOD = []
+export type MERCEDES_MOD = ['AMG']
+export type BMW_MOD =['M Competition','M']
+export type FIAT_MOD =[]
+export type OPEL_MOD =[]
+export type HYUNDAI_MOD =[]
+export type TESLA_MOD =[]
+export type POLESTAR_MOD =[]
+export type MG_MOD =[]
+export type LYNKCO_MOD =[]
 
-export type CAR_SERIES = VW_SERIES | AUDI_SERIES | OPEL_SERIES | MERCEDES_SERIES | BMW_SERIES | FIAT_SERIES | HYUNDAI_SERIES | TESLA_SERIES | POLESTAR_SERIES |MG_SERIES | LYNKCO_SERIES
-export type VW_SERIES = 'T-Roc' | 'Touran' | 'Golf' | 'Tiguan'
-export type AUDI_SERIES = 'Q' | 'A'
-export type MERCEDES_SERIES  = 'C' | 'Vito'| 'SL' | 'S'
-export type BMW_SERIES = 'M' | 'Z' | '4' | '5'
-export type FIAT_SERIES = '500'
-export type OPEL_SERIES = 'Crossland'
-export type HYUNDAI_SERIES = 'I'
-export type TESLA_SERIES = 'Model'
-export type POLESTAR_SERIES = '2'
-export type MG_SERIES = 'EHS'
-export type LYNKCO_SERIES = '01'
-
+export const VW_MOD_ARRAY: VW_MOD | [] = []
+export const AUDI_MOD_ARRAY: AUDI_MOD | [] = []
+export const MERCEDES_MOD_ARRAY: MERCEDES_MOD | [] = []
+export const BMW_MOD_ARRAY: BMW_MOD | [] =['M Competition', 'M']
+export const FIAT_MOD_ARRAY: VW_MOD | [] = []
+export const OPEL_MOD_ARRAY: VW_MOD | [] = []
+export const HYUNDAI_MOD_ARRAY: VW_MOD | [] = []
+export const TESLA_MOD_ARRAY: VW_MOD | [] = []
+export const POLESTAR_MOD_ARRAY: VW_MOD | [] = []
+export const MG_MOD_ARRAY: VW_MOD | [] = []
+export const LYNKCO_MOD_ARRAY: VW_MOD | [] = []
 
 /* Varianten */
 
 export type CAR_VARIANTS = VW_VARIANT | FIAT_VARIANT | MG_VARIANT | LYNKCO_VARIANT | AUDI_VARIANT | MERCEDES_VARIANT | BMW_VARIANT | OPEL_VARIANT | TESLA_VARIANT | HYUNDAI_VARIANT | POLESTAR_VARIANT
 export type VW_VARIANT = 'GTE'
-export type AUDI_VARIANT = '5' | '8'
+export type AUDI_VARIANT = '';
 export type MERCEDES_VARIANT = '166L' | '63';
-export type BMW_VARIANT = '420' | 'Competition' 
-export enum FIAT_VARIANT {}
+export type BMW_VARIANT = '420'
+export type FIAT_VARIANT = '';
 export type OPEL_VARIANT = 'X'
 export type HYUNDAI_VARIANT = '30'
 export type TESLA_VARIANT = 'Y' | '3'
 export type POLESTAR_VARIANT = 'Standard'
-export enum MG_VARIANT {}
-export enum LYNKCO_VARIANT {}
+export type MG_VARIANT = '';
+export type LYNKCO_VARIANT = '';
 
-/* Modifikation */
-export type CAR_MODS = POLESTAR_MOD | MG_MOD | LYNKCO_MOD | VW_MOD | AUDI_MOD | MERCEDES_MOD | TESLA_MOD | HYUNDAI_MOD | MERCEDES_MOD | BMW_MOD | FIAT_MOD | OPEL_MOD
-export type VW_MOD = '';
-export type AUDI_MOD ='S' | 'RS';
-export type MERCEDES_MOD = 'AMG'
-export type BMW_MOD ='M'
-export type FIAT_MOD =''
-export type OPEL_MOD =''
-export type HYUNDAI_MOD =''
-export type TESLA_MOD =''
-export type POLESTAR_MOD =''
-export type MG_MOD =''
-export type LYNKCO_MOD =''
+
+export const VW_VARIANTS_ARRAY = [ { variants: ['GTE']}, {id: 'Touran', variants: []},  {id: 'Golf', variants: ['GTE']}, {id: 'Tiguan', variants: []} ]
+export const AUDI_VARIANTS_ARRAY = [{id: 'Q5', variants: []},{id: 'A8', variants: []}]
+export const MERCEDES_VARIANTS_ARRAY  = [ {id: 'Vito', variants: ['116L']}, {id: 'SL', variants: ['63']} ]
+export const BMW_VARIANTS_ARRAY = [ {id: 'Z4', variants: []}, {id: '4er', variants: []}, {id: '5er', variants: []} ]
+export const FIAT_VARIANTS_ARRAY = [ {id: '500', variants: []}]
+export const OPEL_VARIANTS_ARRAY = [ {id: 'Crossland', varinats: 'X' }]
+export const HYUNDAI_VARIANTS_ARRAY = [{id: 'I', variants: ['30']}]
+export const TESLA_VARIANTS_ARRAY = [{id: 'Model', variants: ['Y', '3'] }]
+export const POLESTAR_VARIANTS_ARRAY = [{id: '2', variants: ['Standard'] }]
+export const MG_VARIANTS_ARRAY = [{id: 'EHS', variants:[]}]
+export const LYNKCO_VARIANTS_ARRAY = [{id: '01', variants: []}]
+export const CAR_VARIANTS_ARRAY = [VW_VARIANTS_ARRAY, AUDI_VARIANTS_ARRAY, MERCEDES_VARIANTS_ARRAY, BMW_VARIANTS_ARRAY, FIAT_VARIANTS_ARRAY, OPEL_VARIANTS_ARRAY, HYUNDAI_VARIANTS_ARRAY, TESLA_VARIANTS_ARRAY, POLESTAR_VARIANTS_ARRAY, MG_VARIANTS_ARRAY, LYNKCO_VARIANTS_ARRAY]
+
+/* Serien */
+
+export type CAR_SERIES = VW_SERIES_ENUM
+export type VW_SERIES = 'T-Roc' | 'Touran' | 'Golf' | 'Tiguan'
+export type AUDI_SERIES = 'Q5' | 'A8'
+export type MERCEDES_SERIES  = 'V'| 'SL'
+export type BMW_SERIES = 'Z4' | '4er' | '5er'
+export type FIAT_SERIES = '500' | ''
+export type OPEL_SERIES = 'Crossland' | ''
+export type HYUNDAI_SERIES = 'I' | ''
+export type TESLA_SERIES = 'Model' | ''
+export type POLESTAR_SERIES = '2' | ''
+export type MG_SERIES = 'EHS' | ''
+export type LYNKCO_SERIES = '01' | ''
+export enum VW_SERIES_ENUM {
+    TROC = 'T-Roc',
+    TOURAN = 'Touran',
+    GOLF = 'Golf',
+    TIGUAN = 'Tiguan'
+} 
+
+
+export const VW_SERIES_ARRAY = [{seriesId: VW_SERIES_ENUM.TROC, variants: VW_VARIANTS_ARRAY, mods: VW_MOD_ARRAY}]
+export const AUDI_SERIES_ARRAY = ['Q5','A8']
+export const MERCEDES_SERIES_ARRAY  = ['Vito', 'SL']
+export const BMW_SERIES_ARRAY = ['Z4,','4er', '5er']
+export const FIAT_SERIES_ARRAY = ['500']
+export const OPEL_SERIESARRAY = ['Crossland']
+export const HYUNDAI_SERIES_ARRAY = ['I']
+export const TESLA_SERIES_ARRAY = ['Model']
+export const POLESTAR_SERIES_ARRAY = ['2']
+export const MG_SERIES_ARRAY = ['EHS']
+export const LYNKCO_SERIES_ARRAY = ['01']
+
+
 /* Model */
 export enum CAR_MODEL {
     LIMOUSINE = 'Limousine',

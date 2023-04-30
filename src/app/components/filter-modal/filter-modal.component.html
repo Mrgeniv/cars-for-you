@@ -2,16 +2,16 @@
 
     <ng-component>
         
-    </ng-component>
+  '  </ng-component>
     <label for="#brands">Marken
-        <select name="" id="brands">
-            <option value=""></option>
+        <select (change)="handleSelectChange($event)" name="" id="brands">
+            <option *ngFor="let brand of carBrands "> {{ brand }} </option>
         </select>
-    </label>
+    </label>'
 
     <label for="#model">Serien
-        <select name="" id="modal">
-            <option value="{car.id}"></option>
+        <select [disabled]="!selectedCarBrand || selectedCarBrand === 'Beliebig'" id="modal">
+            <option *ngFor="let series of carSeriesBasedOnSelectedBrand  "> {{ series }}</option>
         </select>
     </label>
 
@@ -26,6 +26,8 @@
             <option value=""></option>
         </select>
     </label>
+
+    <button (click)="seriesBasedOnBrand('VW')">click</button>
 
 
 </div>
