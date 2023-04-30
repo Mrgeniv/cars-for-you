@@ -1,107 +1,62 @@
-@import url(https://fonts.googleapis.com/css?family=Open+Sans);
-@import url(https://fonts.googleapis.com/css?family=Bree+Serif);
-
-body {
-	background: #212121;
-	font-size:22px;
-	line-height: 32px;
-	color: #ffffff;
-	word-wrap:break-word !important;
-	font-family: 'Open Sans', sans-serif;
-	}
-
-h1 {
-	font-size: 60px;
-	text-align: center;
-	color: #FFF;
-}	
-
-h3 {
-	font-size: 30px;
-	text-align: center;
-	color: #FFF;
-}
-
-h3 a {
-	color: #FFF;
-}
-
-a {
-	color: #FFF;
-}
-
-h1 {
-  display: grid;
-   justify-content: center;
-   align-items: center;
-	margin-top: 100px;
+h1{
+	display: table-cell;
+	vertical-align: middle;
 	text-align:center;
-	font-size:60px;
-	font-family: 'Bree Serif', 'serif';
-	}
-
-#container {
-	margin: 0 auto;
-}
-
-p {
-	text-align: center;
-  color: white;
-}
-
-nav {
-	margin: 50px 0;
-	background-color:#071049 ;
-}
-
-nav ul {
-	padding: 0;
-  margin: 0;
-	list-style: none;
-	position: relative;
-	}
+	width: 70%;
+	margin: 1em auto; 
+	display:flex;
+	align-items:center;
+	justify-content:center;
+	color: #fff;
 	
 
-
-nav a {
-	display:block;
-	padding:0 10px;	
-	color:#FFF;
-	font-size:20px;
-	line-height: 60px;
-	text-decoration:none;
-}
-
-
-
-/* Hide Dropdowns by Default */
-nav ul ul {
-	display: none;
-	position: absolute; 
-	top: 60px; /* the height of the main nav */
-}
 	
-/* Display Dropdowns on Hover */
-nav ul li:hover > ul {
-	display:inherit;
-}
-	
-/* Fisrt Tier Dropdown */
-nav ul ul li {
-	width:170px;
-	float:none;
-	display:list-item;
-	position: relative;
 }
 
-/* Second, Third and more Tiers	*/
-nav ul ul ul li {
-	position: relative;
-	top:-60px; 
-	left:170px;
+.media li {
+
+	grid-template-columns: 17em 1fr;
+	grid-template-rows: 2em 3em;
+	gap: 6em;
+	margin-bottom: 1em;
+	color: #fff;
+	
+	width: 70%;
+	margin: 1em auto; 
+	display:flex;
+	align-items:center;
+	justify-content:center
 }
 
+ li img {
+
+
+	margin: 1em auto; 
+	display:flex;
+	align-items:center;
+	justify-content:center
+}
+li {
+
+	grid-template-columns: 17em 1fr;
+	grid-template-rows: 2em 3em;
+	gap: 6em;
+	margin-bottom: 1em;
+	color: #fff;
 	
-/* Change this in order to change the Dropdown symbol */
-li > a:after { content:  ' +'; }
-li > a:only-child:after { content: ''; }
+	width: 70%;
+	margin: 1em auto; 
+	display:flex;
+	align-items:center;
+	justify-content:center
+}
+
+li img {
+
+	width: 36em;
+	width: 30%;
+	margin: 1em auto; 
+	display:flex;
+	align-items:center;
+	justify-content:center
+}
