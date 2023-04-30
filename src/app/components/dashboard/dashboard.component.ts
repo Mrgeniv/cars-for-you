@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Car } from '../../interfaces/car';
 import { CarService } from '../../services/car.service';
 
@@ -8,6 +8,7 @@ import { CarService } from '../../services/car.service';
   styleUrls: ['./dashboard.component.css'],
 })
 export class DashboardComponent implements OnInit {
+
   carShow: Car;
   cars: Car[];
 
