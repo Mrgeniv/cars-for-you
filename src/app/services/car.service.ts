@@ -1,12 +1,12 @@
 import { Injectable } from '@angular/core';
 import { Car } from '../interfaces/car';
-import { mockCarArray, mockCarClassCollection } from '../mock/mock-data';
+import { carArray, carModelsArray } from '../mock/mock-data';
 
 @Injectable()
 export class CarService {
-  cars: Car[] = mockCarArray;
+  cars: Car[] = carArray;
   carShow: Car;
-  carModels = mockCarClassCollection;
+  carModels = carModelsArray;
   constructor() {}
 
   showCarDetails(car: Car) {
@@ -19,7 +19,7 @@ export class CarService {
     return this.cars;
   }
 
-  getCarModels(): Array<Car['model']> {
+  getCarModels(): Array<Car['details']['model']> {
     return this.carModels;
   }
 
