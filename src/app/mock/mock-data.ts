@@ -21,7 +21,14 @@ import {
   POLESTAR_SERIES_ARRAY, SeriesType,
   TESLA_SERIES_ARRAY,
   VW_MOD_ARRAY,
-  VW_SERIES_ARRAY
+  VW_SERIES_ARRAY,
+  MERCEDES_SERIES_ENUM,
+  MERCEDES_MOD_ARRAY,
+  BMW_SERIES_ENUM,
+  BMW_MOD_ARRAY,
+  CAR_MOD_ARRAY,
+  MERCEDES_MOD_ENUM,
+  BMW_MOD_ENUM
 } from "../types";
 
 export function generateId(): number {
@@ -88,9 +95,8 @@ export const carArray: Array<Car> = [{
     seatsAmount: CAR_SITS.ZWEISITZER,
     transmissionType: CAR_TRANSMISSION.AUTOMATIK,
     fuelType: CAR_FUEL.BENZIN,
-    series: 'SL',
-
-    modifications: 'AMG',
+    series: MERCEDES_SERIES_ENUM.SL,
+    modifications: MERCEDES_MOD_ENUM.AMG,
     yearOfConstruction: CAR_CONSTRUCTIONYEAR.ZWEITAUSENDDREIUNDZWANZIG,
     fuelConsumptionRateInLiter: 35,
     placeOfRental: 'Köln'
@@ -106,8 +112,8 @@ export const carArray: Array<Car> = [{
     seatsAmount: CAR_SITS.ZWEISITZER,
     transmissionType: CAR_TRANSMISSION.AUTOMATIK,
     fuelType: CAR_FUEL.BENZIN,
-    series: '4er',
-    modifications: 'M Competition',
+    series: BMW_SERIES_ENUM.VIERER,
+    modifications: BMW_MOD_ENUM.MCOMPETITION,
    
     yearOfConstruction: CAR_CONSTRUCTIONYEAR.ZWEITAUSENDZWANZIG,
     fuelConsumptionRateInLiter: 40,
@@ -124,8 +130,8 @@ export const carArray: Array<Car> = [{
     seatsAmount: CAR_SITS.SIEBENSITZER,
     transmissionType: CAR_TRANSMISSION.AUTOMATIK,
     fuelType: CAR_FUEL.HYBRID,
-    series: 'V',
-    variant: '166L',
+    series: MERCEDES_SERIES_ENUM.V,
+    variant: MERCEDES,
     yearOfConstruction: CAR_CONSTRUCTIONYEAR.ZWEITAUSENDEINUNDZWANZIG,
     fuelConsumptionRateInLiter: 33,
     placeOfRental: 'Köln'
