@@ -8,7 +8,6 @@ import { RouterModule, Routes } from '@angular/router';
 import { KontaktComponent } from './components/kontakt/kontakt.component';
 import { UberunsComponent } from './components/uberuns/uberuns.component';
 import { AnmeldenComponent } from './components/anmelden/anmelden.component';
-import { GrunderComponent } from './components/grunder/grunder.component';
 import { MietenComponent } from './components/mieten/mieten.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { HomeComponent } from './components/home/home.component';
@@ -19,7 +18,7 @@ const appRoute: Routes = [
   { path: 'kontakt', component: KontaktComponent },
   { path: 'uberuns', component: UberunsComponent },
   { path: 'anmelden', component: AnmeldenComponent },
-  { path: 'grunder', component: GrunderComponent },
+  
   { path: 'mieten', component: MietenComponent },
   { path: 'dashboard', component: DashboardComponent },
 ];
@@ -34,9 +33,9 @@ const appRoute: Routes = [
     KontaktComponent,
     UberunsComponent,
     AnmeldenComponent,
-    GrunderComponent,
     MietenComponent,
     DashboardComponent,
+    FilterModalComponent
   ],
   bootstrap: [AppComponent],
   providers: [CarService],

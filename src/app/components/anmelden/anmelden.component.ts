@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -6,14 +6,13 @@ import { Router } from '@angular/router';
   templateUrl: './anmelden.component.html',
   styleUrls: ['./anmelden.component.css'],
 })
-export class AnmeldenComponent implements OnInit {
+export class AnmeldenComponent {
   username: string;
   password: string;
-  loggedIn: boolean = false;
+  loggedIn = false
 
   constructor(private router: Router) {}
 
-  ngOnInit() {}
 
   login() {
     const validAdminUsername = 'admin';

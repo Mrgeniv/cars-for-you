@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component , OnInit } from '@angular/core';
 import { Car } from '../../interfaces/car';
 import { CarService } from '../../services/car.service';
 
@@ -8,10 +8,15 @@ import { CarService } from '../../services/car.service';
   styleUrls: ['./dashboard.component.css'],
 })
 export class DashboardComponent implements OnInit {
+  carToEdit:number
+  editCar:Car
   carShow: Car;
   cars: Car[];
 
   constructor(private carService: CarService) {}
+
+
+  
 
   ngOnInit() {
     this.cars = this.carService.getCars();
@@ -28,4 +33,12 @@ export class DashboardComponent implements OnInit {
   getCars(): Car[] {
     return this.carService.getCars();
   }
+
+  deleteCar(car:Car){
+    this.carService.deleteCar(car);
+  }
+  
+
+  
+
 }
