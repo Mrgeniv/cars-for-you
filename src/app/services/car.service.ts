@@ -3,9 +3,12 @@ import { Car, CarBrand } from '../interfaces';
 import { BrandType, CAR_BRANDS,  CAR_MODEL, CAR_MODEL_ARRAY, CAR_SERIES, CAR_VARIANTS, SeriesType, VariantsType} from '../types';
 import { carArray, carModelsArray, data } from '../mock/mock-data';
 
-@Injectable()
+@Injectable({
+    providedIn: 'root'
+  })
 export class CarService {
   cars: Car[] = carArray;
+  filteredCars: Car[] = [];
   carShow: Car;
   carModels = carModelsArray;
   seriesBasedOnBrand: Array<SeriesType>
@@ -56,6 +59,8 @@ export class CarService {
       this.cars[index] = car;
     }
   }
+
+
 
   filterBrand(toFilterBrand : string) {
     this.cars = this.cars.filter( car => car.details.brand === toFilterBrand)
