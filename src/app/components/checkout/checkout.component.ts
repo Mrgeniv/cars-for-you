@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnDestroy, OnInit} from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Car } from 'src/app/interfaces/car';
 import { CarService } from 'src/app/services/car.service';
@@ -8,7 +8,7 @@ import { CarService } from 'src/app/services/car.service';
   templateUrl: './checkout.component.html',
   styleUrls: ['./checkout.component.css']
 })
-export class CheckoutComponent implements OnInit {
+export class CheckoutComponent implements OnInit, OnDestroy {
   carId: number
   sub: any
   currentCar: Car;
@@ -24,7 +24,10 @@ export class CheckoutComponent implements OnInit {
 
     this.currentCar = this.carService.getCarById(this.carId);
     console.log(this.currentCar);
+  }
 
+  ngOnDestroy() {
+    this.sub.unsubscribe()
   }
 
 }
