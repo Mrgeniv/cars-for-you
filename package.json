@@ -14,6 +14,7 @@
     "@ng-bootstrap/ng-bootstrap": "^14.1.0",
     "@popperjs/core": "^2.11.6",
     "bootstrap": "^5.2.3",
+    "jspdf": "^2.5.1",
     "rxjs": "^7.8.1",
     "tslib": "^2.5.0",
     "zone.js": "~0.11.4"
