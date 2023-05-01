@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnChanges, Injectable } from '@angular/core';
 import { CarService } from '../../services/car.service';
 
 @Component({
@@ -6,12 +6,21 @@ import { CarService } from '../../services/car.service';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css'],
 })
-export class HomeComponent implements OnInit {
+
+@Injectable({
+  providedIn: 'root'
+})
+
+export class HomeComponent implements OnInit, OnChanges {
   carsArray: CarService['cars'] = [];
   constructor(private carService: CarService) {}
 
+  ngOnChanges() {
+    this.carsArray = this.carService.getCars();
+    console.log('Change')
+  }
+
   ngOnInit() {
     this.carsArray = this.carService.getCars();
-    console.log(this.carsArray);
   }
 }
