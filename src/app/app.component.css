@@ -7,21 +7,18 @@
 header {
   display: flex;
   justify-content: space-between;
-  flex: 0 1 4rem;
   width: 100%;
-  padding: 0 2rem;
+  padding: 1rem 2rem 1rem 2rem;
+  height: 4rem;
 }
 
 main {
   overflow-y: auto;
   flex: 1 0 auto;
   width: 100%;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 
-footer {
-  flex: 0 1 2rem;
-}
 
 header .logo_container {
   display: flex;
@@ -46,10 +43,12 @@ nav {
 
 nav > ul {
   padding: 0;
+  margin: 0;
   color: white;
   display: flex;
   /* justify-content: space-evenly; */
   list-style-type: none;
+  align-items: center;
 }
 
 nav > ul > li {
@@ -94,7 +93,7 @@ nav > ul > li:not(:first-child):not(:last-child) {
 footer {
   position: relative;
   background-color: #333c49;
-  padding: 15px 0;
+  flex: 0 1 2rem;
 }
 
 .header {
@@ -150,7 +149,7 @@ footer {
 }
 
 .navigation a:last-child {
-  padding-right: none;
+  padding-right: 0;
 }
 
 .navigation a li {
@@ -191,7 +190,8 @@ footer {
 
 .container-footer {
   max-width: 1170px;
-  margin: auto;
+  margin: 0 auto;
+  padding: 2rem 0;
 }
 
 .row {
@@ -240,7 +240,7 @@ ul {
   text-decoration: none;
   font-weight: 300;
   display: block;
-  transition: all 0.3 ease;
+  transition: all 0.3s ease;
 }
 
 .footer-col ul li a:hover {
@@ -258,7 +258,7 @@ ul {
   line-height: 40px;
   border-radius: 50%;
   color: #ffffff;
-  transition: all 0.5 ease;
+  transition: all 0.5s ease;
 }
 
 .footer-col .social-links a:hover {

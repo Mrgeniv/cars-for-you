@@ -1,6 +1,6 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Car } from 'src/app/interfaces/car';
+import { Car } from 'src/app/interfaces';
 import { CarService } from 'src/app/services/car.service';
 import jsPDF from 'jspdf';
 
@@ -45,7 +45,6 @@ export class CheckoutComponent implements OnInit, OnDestroy {
       this.carId = +params['id'];
     });
     this.currentCar = this.carService.getCarById(this.carId);
-    console.log(this.currentCar);
 
     
   }
@@ -55,23 +54,6 @@ export class CheckoutComponent implements OnInit, OnDestroy {
   }
   loadPdf() {
 
-    let brand: string = "";
-    let series: string = "";
-    let variant: string = "";
-    let mods: string = "";
-    let model: string = "";
-    
-    
-
-    if(this.currentCar.details.brand !== undefined){
-      brand = this.currentCar.details.brand;
-    } if(this.currentCar.details.series !== undefined){
-      series = this.currentCar.details.series;
-    } if(this.currentCar.details.modifications !== undefined){
-      mods = this.currentCar.details.modifications;
-    } if (this.currentCar.details.model !== undefined){
-      model = this.currentCar.details.model;
-    }
 
 
 

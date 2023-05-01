@@ -26,20 +26,21 @@ label {
   display: flex;
   flex-direction: column;
   margin-bottom: 1rem;
+  color: #fff;
 }
 
 input, textarea {
   padding: 0.5rem;
   border: 1px solid #ccc;
-  border-radius: 4px;
-  background: #ccc(247, 243, 243, 0.4); 
+  margin-top: .5rem;
   height: 30px;
-    border: none;
     -moz-border-radius: 10px;
     -webkit-border-radius: 10px;
     border-radius: 10px;
+}
 
-    
+textarea {
+  height: 100px;
 }
 
 button {
@@ -50,18 +51,13 @@ button {
   border-radius: 4px;
   cursor: pointer;
   float: right;
-  margin-right: px; /* optional, um den Abstand anzupassen */
   width: 200px;
   height: 50px;
   font-size: 24px;
-
-
-
 }
 
 button:hover {
   background-color: #11a190;
-  
 }
 
 .popup {
