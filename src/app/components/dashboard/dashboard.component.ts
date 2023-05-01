@@ -9,6 +9,7 @@ import { CarService } from '../../services/car.service';
 })
 export class DashboardComponent implements OnInit {
   carToEdit:number
+  editCar:Car
   carShow: Car;
   cars: Car[];
 
@@ -36,11 +37,8 @@ export class DashboardComponent implements OnInit {
   deleteCar(car:Car){
     this.carService.deleteCar(car);
   }
+  
 
   
-  toggleEditMode(id:number):void{
-    this.carToEdit = id;
-    console.log(this.carToEdit)
-  }
 
 }
