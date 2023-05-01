@@ -1,4 +1,3 @@
-
 <table>
     <thead class="thead-dark">
       <tr>
@@ -17,7 +16,8 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let car of cars">
+    <ng-container *ngFor="let car of cars">
+      <tr>
         <td>{{car.id}}</td>
         <td><img src="{{ car.image }}" alt=""></td>
         <td>{{ car.details.brand }} {{ car.details.series }} {{ car.details.variant }} {{ car.details.modifications }} {{ car.details.model }}</td>
@@ -29,10 +29,15 @@
         <td>{{ car.details.price }}€</td>
         <td>{{ car.details.seatsAmount }}</td>
         <td>{{ car.details.placeOfRental }}</td>
-        <td><button class="material-icons" type="button" >edit</button></td>
-        <td><button class="material-icons" type="button" >delete</button></td>
-
+        <button class="material-symbols-rounded" type="button" (click)="deleteCar(car)">delete_forever</button>
       </tr>
+    </ng-container>
+
+
+    
+    
+
+
     </tbody>
   </table>
 
