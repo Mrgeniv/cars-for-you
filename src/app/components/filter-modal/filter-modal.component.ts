@@ -1,6 +1,8 @@
 import { Component, OnInit, OnChanges } from '@angular/core';
+import { Subscription } from 'rxjs';
+import { Observable } from 'rxjs/internal/Observable';
 import { c, data } from 'src/app/mock/mock-data';
-import { SeriesType } from 'src/app/types';
+import {CAR_SERIES, CAR_VARIANTS, SeriesType } from 'src/app/types';
 import { Car, CarBrand } from '../../interfaces';
 import { CarService } from '../../services/car.service';
 
@@ -10,24 +12,53 @@ import { CarService } from '../../services/car.service';
   styleUrls: ['./filter-modal.component.css'],
 })
 export class FilterModalComponent implements OnInit, OnChanges {
-  carModels: Array<Car['details']['model']>;
-  carBrands: Array<CarBrand | 'Beliebig' >;
+  carModels: Array< Car['details']['model'] >;
+  carBrands: Array< CarBrand | 'Beliebig' >;
   selectedCarBrand: string = '';
+  selectedCarSeries: string = '';
+  selectedCarVariant: string = '';
   carSeriesBasedOnSelectedBrand: SeriesType[] = [];
-  carVariantsBasedOnSlectedSeries: string[] = []
+  carVariantsBasedOnSelectedSeries: string[] = [];
   constructor(private carService: CarService) {}
 
  handleSelectChangeForBrand(event: Event) {
-const target = event.target as HTMLSelectElement;
-this.selectedCarBrand = target.value;
-console.log(this.selectedCarBrand);
-if( this.selectedCarBrand !== 'Beliebig') {
-  this.carSeriesBasedOnSelectedBrand = this.carService.getSeriesBasedOnBrand(this.selectedCarBrand);
-  console.log(this.carSeriesBasedOnSelectedBrand);
-} else {
-  this.carSeriesBasedOnSelectedBrand = [];
+  this.selectedCarBrand = (event.target as HTMLSelectElement).value
+  this.resetSelect();
+  if (this.selectedCarBrand !== 'Beliebig') {
+    this.carSeriesBasedOnSelectedBrand = this.carService.getSeriesBasedOnBrand(this.selectedCarBrand);
+  }
 }
 
+resetSelect() {
+  this.selectedCarSeries = '';
+  this.carSeriesBasedOnSelectedBrand = [];
+  this.carVariantsBasedOnSelectedSeries = [];
+}
+
+ handleSelectChangeForSeries(event: Event) {
+  this.selectedCarSeries = (event.target as HTMLSelectElement).value
+  if( this.selectedCarSeries !== 'Beliebig') {
+    this.carVariantsBasedOnSelectedSeries = this.carService.getVariantsBasedOnSeries(this.selectedCarSeries);
+  } else {
+    this.carVariantsBasedOnSelectedSeries = [];
+  }
+ }
+
+ handleSelectChangeForVariant(event: Event) {
+  this.selectedCarVariant = (event.target as HTMLSelectElement).value
+ }
+
+ filterCarList(){
+  if(this.selectedCarBrand && this.selectedCarSeries && this.selectedCarVariant) {
+    this.carService.filterVariantInSeries(this.selectedCarBrand, this.selectedCarSeries, this.selectedCarVariant)
+    
+  } else if(this.selectedCarBrand && this.selectedCarSeries) {
+    this.carService.filterSeriesInBrand(this.selectedCarBrand, this.selectedCarSeries);
+
+  } else {
+    this.carService.filterBrand(this.selectedCarBrand);
+    console.log('Triggered');
+  }
  }
 
  ngOnChanges() {

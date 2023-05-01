@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Car, CarBrand } from '../interfaces';
-import {CAR_SERIES, SeriesType, VariantsType} from '../types';
+import { BrandType, CAR_BRANDS,  CAR_MODEL, CAR_MODEL_ARRAY, CAR_SERIES, CAR_VARIANTS, SeriesType, VariantsType} from '../types';
 import { carArray, carModelsArray, data } from '../mock/mock-data';
 
 @Injectable()
@@ -56,4 +56,18 @@ export class CarService {
       this.cars[index] = car;
     }
   }
+
+  filterBrand(toFilterBrand : string) {
+    this.cars = this.cars.filter( car => car.details.brand === toFilterBrand)
+    console.log(this.cars.filter( car => car.details.brand === toFilterBrand));
+  }
+
+  filterSeriesInBrand(toFilterBrand: string, toFilterSeries: string) {
+    this.cars = this.cars.filter(car => car.details.brand === toFilterBrand && car.details.series === toFilterSeries);
+  }
+
+  filterVariantInSeries(toFilteredBrand: string, toFilterSeries: string, toFilterVariant: string) {
+    this.cars = this.cars.filter(car => car.details.brand === toFilteredBrand && car.details.series === toFilterSeries && car.details.variant === toFilterVariant);
+  }
+
 }

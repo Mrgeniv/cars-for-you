@@ -94,41 +94,6 @@ export const data: CarsData = [
   }
 ]
 
-/* export const allCarSeries: Array<AllCarSeriesArray> = [
-  {
-    id: CAR_BRANDS.VW, series: VW_SERIES_ARRAY
-  },
-  {
-    id: CAR_BRANDS.AUDI, series: AUDI_SERIES_ARRAY
-  },
-  {
-    id: CAR_BRANDS.MERCEDES, series: MERCEDES_SERIES_ARRAY
-  },
-  {
-    id: CAR_BRANDS.BMW, series: BMW_SERIES_ARRAY
-  },
-  {
-    id: CAR_BRANDS.FIAT, series: FIAT_SERIES_ARRAY
-  },
-  {
-    id: CAR_BRANDS.OPEL, series: FIAT_SERIES_ARRAY
-  },
-  {
-    id: CAR_BRANDS.HYUNDAI, series: HYUNDAI_SERIES_ARRAY
-  },
-  {
-    id: CAR_BRANDS.TESLA, series: TESLA_SERIES_ARRAY
-  },
-  {
-    id: CAR_BRANDS.POLESTAR, series: POLESTAR_SERIES_ARRAY
-  },
-  {
-    id: CAR_BRANDS.MG, series: MG_SERIES_ARRAY
-  },
-  {
-    id: CAR_BRANDS.LYNKCO, series: LYNKCO_SERIES_ARRAY
-  }
-] */
 
 export type AllCarSeriesArray = {id : CarBrand, series: Array<SeriesType>}
 export const c = CAR_VARIANTS_ARRAY.map(brand => brand)

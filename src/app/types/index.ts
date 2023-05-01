@@ -223,6 +223,7 @@ export enum CAR_MODEL {
     ELEKTRO = 'Elektrowagen'
 }
 
+export const CAR_MODEL_ARRAY: Array<string>= ['Limousine', 'Suv', 'Coupé', 'Cabriolet', 'Van' ,'Kompaktwagen' ,'Kombi', 'Pick-Up', 'Elektrowagen']
 export enum CAR_CONSTRUCTIONYEAR {
     ZWEITAUSEND = '2000',
     ZWEITAUSENDEINS = '2001',
