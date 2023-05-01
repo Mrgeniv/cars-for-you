@@ -12,19 +12,21 @@ import { MietenComponent } from './components/mieten/mieten.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { HomeComponent } from './components/home/home.component';
 import { FilterModalComponent } from './components/filter-modal/filter-modal.component';
+import { CheckoutComponent } from './components/checkout/checkout.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 const appRoute: Routes = [
   { path: '', component: HomeComponent },
   { path: 'kontakt', component: KontaktComponent },
   { path: 'uberuns', component: UberunsComponent },
   { path: 'anmelden', component: AnmeldenComponent },
-  
   { path: 'mieten', component: MietenComponent },
   { path: 'dashboard', component: DashboardComponent },
+  { path: 'checkout/:id', component: CheckoutComponent, pathMatch:"full"}
 ];
 
 @NgModule({
-  imports: [BrowserModule, FormsModule, RouterModule.forRoot(appRoute)],
+  imports: [BrowserModule, FormsModule, RouterModule.forRoot(appRoute), NgbModule],
   declarations: [
     AppComponent,
     HomeComponent,
@@ -35,7 +37,8 @@ const appRoute: Routes = [
     AnmeldenComponent,
     MietenComponent,
     DashboardComponent,
-    FilterModalComponent
+    FilterModalComponent,
+    CheckoutComponent
   ],
   bootstrap: [AppComponent],
   providers: [CarService],
