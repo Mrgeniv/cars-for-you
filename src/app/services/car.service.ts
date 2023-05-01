@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Car, CarBrand } from '../interfaces';
 import {CAR_SERIES, SeriesType} from '../types';
-import { allCarSeries, carArray, carModelsArray } from '../mock/mock-data';
+import { carArray, carModelsArray, data } from '../mock/mock-data';
 
 @Injectable()
 export class CarService {
@@ -28,10 +28,18 @@ export class CarService {
   }
 
   getSeriesBasedOnBrand(carBrand: string) : Array<SeriesType> {
-    const seriesBasedOnBrand = allCarSeries.find(series => series.id == carBrand);
+    const seriesBasedOnBrand = data.find(series => series.brandId === carBrand);
 
-    return seriesBasedOnBrand.series
+    return seriesBasedOnBrand?.series
   }
+
+  getVariantsBasedOnSeries(carBrand: string, series: string) : Array<string> {
+    const seriesBasedOnBrand = data.find(series => series.brandId === carBrand);
+    const variantsBasedOnSeries = seriesBasedOnBrand.series.find(variants => variants.seriesId === series);
+   /*  allCarSeries.find( allCarSeriesLine => allCarSeriesLine.id == carBrand && allCarSeriesLine.series.find( seriesId => seriesId.seriesId == series )); */ 
+
+   return variantsBasedOnSeries?.variants
+  } 
 
   getCarModels(): Array<Car['details']['model']> {
     return this.carModels;

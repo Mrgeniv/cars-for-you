@@ -1,5 +1,6 @@
 import { Component, OnInit, OnChanges } from '@angular/core';
-import { c } from 'src/app/mock/mock-data';
+import { c, data } from 'src/app/mock/mock-data';
+import { SeriesType } from 'src/app/types';
 import { Car, CarBrand } from '../../interfaces';
 import { CarService } from '../../services/car.service';
 
@@ -12,18 +13,17 @@ export class FilterModalComponent implements OnInit, OnChanges {
   carModels: Array<Car['details']['model']>;
   carBrands: Array<CarBrand | 'Beliebig' >;
   selectedCarBrand: string = '';
-  carSeriesBasedOnSelectedBrand: string[] = [];
+  carSeriesBasedOnSelectedBrand: SeriesType[] = [];
+  carVariantsBasedOnSlectedSeries: string[] = []
   constructor(private carService: CarService) {}
 
- seriesBasedOnBrand(string: string) {
-  this.carService.getSeriesBasedOnBrand(string);
- }
-
- handleSelectChange(event: Event) {
+ handleSelectChangeForBrand(event: Event) {
 const target = event.target as HTMLSelectElement;
 this.selectedCarBrand = target.value;
+console.log(this.selectedCarBrand);
 if( this.selectedCarBrand !== 'Beliebig') {
   this.carSeriesBasedOnSelectedBrand = this.carService.getSeriesBasedOnBrand(this.selectedCarBrand);
+  console.log(this.carSeriesBasedOnSelectedBrand);
 } else {
   this.carSeriesBasedOnSelectedBrand = [];
 }
@@ -39,6 +39,6 @@ if( this.selectedCarBrand !== 'Beliebig') {
   ngOnInit() {
     this.carModels = this.carService.getCarModels();
     this.carBrands = ['Beliebig', ...this.carService.getCarBrands()];
-    console.log(c);
+    console.log(data);
   }
 }

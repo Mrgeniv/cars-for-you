@@ -28,7 +28,26 @@ import {
   BMW_MOD_ARRAY,
   CAR_MOD_ARRAY,
   MERCEDES_MOD_ENUM,
-  BMW_MOD_ENUM
+  BMW_MOD_ENUM,
+  AUDI_SERIES_ENUM,
+  OPEL_SERIES_ENUM,
+  VW_SERIES_ENUM,
+  TESLA_SERIES_ENUM,
+  MG_SERIES_ENUM,
+  AUDI_MOD_ARRAY,
+  FIAT_MOD_ARRAY,
+  OPEL_SERIES_ARRAY,
+  OPEL_MOD_ARRAY,
+  HYUNDAI_MOD_ARRAY,
+  TESLA_MOD_ARRAY,
+  POLESTAR_MOD_ARRAY,
+  MG_MOD_ARRAY,
+  LYNKCO_MOD_ARRAY,
+  MERCEDES_V_VARIANTS_ARRAY,
+  MERCEDES_V_VARIANT_ENUM,
+  OPEL_CROSSLAND_VARIANT_ENUM,
+  VW_GOLF_VARIANT_ENUM,
+  TESLA_MODEL_VARIANT_ENUM
 } from "../types";
 
 export function generateId(): number {
@@ -42,10 +61,40 @@ export const carModelsArray: Array<Car['details']['model']> = [
 export const data: CarsData = [
   {
     brandId: CAR_BRANDS.VW, series: VW_SERIES_ARRAY, mods: VW_MOD_ARRAY
+  },
+  {
+    brandId: CAR_BRANDS.AUDI, series: AUDI_SERIES_ARRAY, mods: AUDI_MOD_ARRAY
+  },
+  {
+    brandId: CAR_BRANDS.MERCEDES, series: MERCEDES_SERIES_ARRAY, mods: MERCEDES_MOD_ARRAY
+  },
+  {
+    brandId: CAR_BRANDS.BMW, series: BMW_SERIES_ARRAY, mods: BMW_MOD_ARRAY
+  },
+  {
+    brandId: CAR_BRANDS.FIAT, series: FIAT_SERIES_ARRAY, mods: FIAT_MOD_ARRAY
+  },
+  {
+    brandId: CAR_BRANDS.OPEL, series: OPEL_SERIES_ARRAY, mods: OPEL_MOD_ARRAY
+  },
+  {
+    brandId: CAR_BRANDS.HYUNDAI, series: HYUNDAI_SERIES_ARRAY, mods: HYUNDAI_MOD_ARRAY
+  },
+  {
+    brandId: CAR_BRANDS.TESLA, series: TESLA_SERIES_ARRAY, mods: TESLA_MOD_ARRAY
+  },
+  {
+    brandId: CAR_BRANDS.POLESTAR, series: POLESTAR_SERIES_ARRAY, mods: POLESTAR_MOD_ARRAY
+  },
+  {
+    brandId: CAR_BRANDS.MG, series: MG_SERIES_ARRAY, mods: MG_MOD_ARRAY
+  },
+  {
+    brandId: CAR_BRANDS.LYNKCO, series: LYNKCO_SERIES_ARRAY, mods: LYNKCO_MOD_ARRAY
   }
 ]
 
-export const allCarSeries: Array<AllCarSeriesArray> = [
+/* export const allCarSeries: Array<AllCarSeriesArray> = [
   {
     id: CAR_BRANDS.VW, series: VW_SERIES_ARRAY
   },
@@ -79,7 +128,7 @@ export const allCarSeries: Array<AllCarSeriesArray> = [
   {
     id: CAR_BRANDS.LYNKCO, series: LYNKCO_SERIES_ARRAY
   }
-]
+] */
 
 export type AllCarSeriesArray = {id : CarBrand, series: Array<SeriesType>}
 export const c = CAR_VARIANTS_ARRAY.map(brand => brand)
@@ -114,7 +163,6 @@ export const carArray: Array<Car> = [{
     fuelType: CAR_FUEL.BENZIN,
     series: BMW_SERIES_ENUM.VIERER,
     modifications: BMW_MOD_ENUM.MCOMPETITION,
-   
     yearOfConstruction: CAR_CONSTRUCTIONYEAR.ZWEITAUSENDZWANZIG,
     fuelConsumptionRateInLiter: 40,
     placeOfRental: 'Bremen'
@@ -131,7 +179,7 @@ export const carArray: Array<Car> = [{
     transmissionType: CAR_TRANSMISSION.AUTOMATIK,
     fuelType: CAR_FUEL.HYBRID,
     series: MERCEDES_SERIES_ENUM.V,
-    variant: MERCEDES,
+    variant: MERCEDES_V_VARIANT_ENUM.HUNDERTSECHSENL,
     yearOfConstruction: CAR_CONSTRUCTIONYEAR.ZWEITAUSENDEINUNDZWANZIG,
     fuelConsumptionRateInLiter: 33,
     placeOfRental: 'Köln'
@@ -147,7 +195,7 @@ export const carArray: Array<Car> = [{
     seatsAmount: CAR_SITS.VIERSITZER,
     transmissionType: CAR_TRANSMISSION.AUTOMATIK,
     fuelType: CAR_FUEL.BENZIN,
-    series: 'Q5',
+    series: AUDI_SERIES_ENUM.Q5,
     yearOfConstruction: CAR_CONSTRUCTIONYEAR.ZWEITAUSENDDREIUNDZWANZIG,
     fuelConsumptionRateInLiter: 35,
     placeOfRental: 'Köln'
@@ -163,7 +211,7 @@ export const carArray: Array<Car> = [{
     seatsAmount: CAR_SITS.VIERSITZER,
     transmissionType: CAR_TRANSMISSION.AUTOMATIK,
     fuelType: CAR_FUEL.BENZIN,
-    series: 'A8',
+    series: AUDI_SERIES_ENUM.A8,
     yearOfConstruction: CAR_CONSTRUCTIONYEAR.ZWEITAUSENDDREIUNDZWANZIG,
     fuelConsumptionRateInLiter: 35,
     placeOfRental: 'Berlin'
@@ -179,8 +227,8 @@ export const carArray: Array<Car> = [{
     seatsAmount: CAR_SITS.VIERSITZER,
     transmissionType: CAR_TRANSMISSION.AUTOMATIK,
     fuelType: CAR_FUEL.ELEKTRO,
-    series: 'Crossland',
-    variant: 'X',
+    series: OPEL_SERIES_ENUM.CROSSLAND,
+    variant: OPEL_CROSSLAND_VARIANT_ENUM.X,
     yearOfConstruction: CAR_CONSTRUCTIONYEAR.ZWEITAUSENDACHTZEHN,
     fuelConsumptionRateInLiter: 35,
     placeOfRental: 'Köln'
@@ -196,8 +244,8 @@ export const carArray: Array<Car> = [{
     seatsAmount: CAR_SITS.VIERSITZER,
     transmissionType: CAR_TRANSMISSION.MAUNELL,
     fuelType: CAR_FUEL.BENZIN,
-    series: '5er',
-    modifications: 'M',
+    series: BMW_SERIES_ENUM.FUENFER,
+    modifications: BMW_MOD_ENUM.M,
     yearOfConstruction: CAR_CONSTRUCTIONYEAR.ZWEITAUSENDFUENFZEHN,
     fuelConsumptionRateInLiter: 12,
     placeOfRental: 'Bremen'
@@ -213,9 +261,8 @@ export const carArray: Array<Car> = [{
     seatsAmount: CAR_SITS.VIERSITZER,
     transmissionType: CAR_TRANSMISSION.AUTOMATIK,
     fuelType: CAR_FUEL.ELEKTRO,
-    series: 'Golf',
-    variant: 'GTE',
-  
+    series: VW_SERIES_ENUM.GOLF,
+    variant: VW_GOLF_VARIANT_ENUM.GTE,
     yearOfConstruction: CAR_CONSTRUCTIONYEAR.ZWEITAUSENDNEUN,
     fuelConsumptionRateInLiter: 10,
     placeOfRental: 'Bremen'
@@ -231,8 +278,8 @@ export const carArray: Array<Car> = [{
     seatsAmount: CAR_SITS.VIERSITZER,
     transmissionType: CAR_TRANSMISSION.AUTOMATIK,
     fuelType: CAR_FUEL.BENZIN,
-    series: 'Model',
-    variant: 'Y',
+    series: TESLA_SERIES_ENUM.MODEL,
+    variant: TESLA_MODEL_VARIANT_ENUM.Y,
     yearOfConstruction: CAR_CONSTRUCTIONYEAR.ZWEITAUSENDDREIUNDZWANZIG,
     placeOfRental: 'Köln'
   }
@@ -247,7 +294,7 @@ export const carArray: Array<Car> = [{
     seatsAmount: CAR_SITS.VIERSITZER,
     transmissionType: CAR_TRANSMISSION.AUTOMATIK,
     fuelType: CAR_FUEL.ELEKTRO,
-    series: 'Tiguan',
+    series: VW_SERIES_ENUM.TIGUAN,
     yearOfConstruction: CAR_CONSTRUCTIONYEAR.ZWEITAUSENDDREIUNDZWANZIG,
     fuelConsumptionRateInLiter: 35,
     placeOfRental: 'Köln'
@@ -263,7 +310,7 @@ export const carArray: Array<Car> = [{
     seatsAmount: CAR_SITS.VIERSITZER,
     transmissionType: CAR_TRANSMISSION.AUTOMATIK,
     fuelType: CAR_FUEL.HYBRID,
-    series: 'EHS',
+    series: MG_SERIES_ENUM.EHS,
     yearOfConstruction: CAR_CONSTRUCTIONYEAR.ZWEITAUSENDSECHS,
     fuelConsumptionRateInLiter: 10,
     placeOfRental: 'Berlin'
