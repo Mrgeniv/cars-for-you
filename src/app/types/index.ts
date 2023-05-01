@@ -13,10 +13,10 @@ export enum CAR_BRANDS {
     LYNKCO = 'Lynk & Co'
 }
 
-type BrandObject = { brandId: CAR_BRANDS, series: Array<SeriesType>, mods: Array<string>  }
-export type SeriesType = { seriesId: CAR_SERIES, variants: Array<string> };
-
-export type CarsData = Array<BrandObject>
+export type BrandType = { brandId: CAR_BRANDS, series: Array<SeriesType>, mods: Array<string>  }
+export type SeriesType = { seriesId: CAR_SERIES, variants: VariantsType };
+export type VariantsType = Array<string>
+export type CarsData = Array<BrandType>
 
 /* Modifikation */
 export type CAR_MODS = POLESTAR_MOD_ENUM| MG_MOD_ENUM | LYNKCO_MOD_ENUM | VW_MOD_ENUM | AUDI_MOD_ENUM | MERCEDES_MOD_ENUM | TESLA_MOD_ENUM | HYUNDAI_MOD_ENUM | MERCEDES_MOD_ENUM | BMW_MOD_ENUM | FIAT_MOD_ENUM | OPEL_MOD_ENUM
