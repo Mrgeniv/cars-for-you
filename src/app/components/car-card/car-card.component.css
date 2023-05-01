@@ -19,10 +19,11 @@
   border-top: 1px solid rgba(255, 255, 255, 0.6);
   box-shadow: 10px 3px 10px rgba(3, 4, 5, 1);
   margin: 1rem;
+  transition: transform .1s ease-in-out;
 }
 
 :host:hover {
-  transform: rotate(-1deg) translate(0px);
+  transform: scale(1.05);
 }
 
 .filter-sidebar {
@@ -364,7 +365,7 @@ label {
 }
 
 .popup h2 {
-  margin-top: 0;
+  margin: 0;
 }
 
 .popup .close {
@@ -382,10 +383,27 @@ label {
   font-size: 18px;
   line-height: 1.5;
 }
-.pop .conent li{
-  
+.pop .content li{
+
 }
-.pop .conent ul,li{
+.pop .content ul,li{
   list-style: none;
 }
 
+.content > ul {
+  padding: 0;
+  margin: 0;
+}
+
+.content > ul > li {
+  display: flex;
+  justify-content: space-between;
+}
+
+.car-title {
+  justify-content: center !important;
+}
+
+.car-title > span {
+  margin-bottom: 1rem;
+}

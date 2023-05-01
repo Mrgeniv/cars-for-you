@@ -1,8 +1,6 @@
 import { Component, OnInit, OnChanges } from '@angular/core';
-import { Subscription } from 'rxjs';
-import { Observable } from 'rxjs/internal/Observable';
-import { c, data } from 'src/app/mock/mock-data';
-import {CAR_SERIES, CAR_VARIANTS, SeriesType } from 'src/app/types';
+import { data } from 'src/app/mock/mock-data';
+import { SeriesType } from 'src/app/types';
 import { Car, CarBrand } from '../../interfaces';
 import { CarService } from '../../services/car.service';
 
@@ -57,14 +55,10 @@ resetSelect() {
 
   } else {
     this.carService.filterBrand(this.selectedCarBrand);
-    console.log('Triggered');
   }
  }
 
- ngOnChanges() {
-
-
- }
+ ngOnChanges() {}
 
 
   ngOnInit() {

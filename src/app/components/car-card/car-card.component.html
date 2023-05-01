@@ -29,7 +29,7 @@
   <p class="card-price"><strong>{{car.details.price}} €</strong> <span>/ Tag</span></p>
   <div class="button-wrapper">
     <div class="box">
-      <label for="popup-toggle-{{ car.id }}" class="btn outline">DETAILS</label>
+      <label for="popup-toggle-{{ car.id }}" class="btn outline">{{'details' | uppercase}}</label>
     </div>
     <input type="checkbox" id="popup-toggle-{{ car.id }}" class="overlay-checkbox">
 
@@ -39,15 +39,15 @@
         <label for="popup-toggle-{{ car.id }}" class="close">&times;</label>
         <div class="content">
           <ul>
-            <li><strong>Bezeichnung:</strong> {{ car.details.brand }} {{ car.details.series }} {{ car.details.variant }} {{ car.details.modifications }} {{ car.details.model }}</li>
-            <li><strong>Zulassungsdatum:</strong> {{ car.details.yearOfConstruction }}</li>
-            <li><strong>Tankart:</strong> {{ car.details.fuelType }}</li>
-            <li><strong>Verbrauch l/100km:</strong> {{ car.details.fuelConsumptionRateInLiter }} km/l</li>
-            <li><strong>Getriebe:</strong> {{ car.details.transmissionType }}</li>
-            <li><strong>PS:</strong> {{ car.details.horsePower  }}</li>
-            <li><strong>Mietpreis:</strong> {{ car.details.price }}€</li>
-            <li><strong>Anzahl Sitze:</strong> {{ car.details.seatsAmount }}</li>
-            <li><strong>Ort:</strong> {{ car.details.placeOfRental }}</li>
+            <li class="car-title"><span>{{ car.details.brand }} {{ car.details.series }} {{ car.details.variant }} {{ car.details.modifications }} {{ car.details.model }}</span></li>
+            <li><strong>Zulassungsdatum:</strong> <span>{{ car.details.yearOfConstruction }}</span></li>
+            <li><strong>Tankart:</strong> <span>{{ car.details.fuelType }}</span></li>
+            <li><strong>Verbrauch l/100km:</strong> <span>{{ car.details.fuelConsumptionRateInLiter }} Liter</span> </li>
+            <li><strong>Getriebe:</strong> <span>{{ car.details.transmissionType }}</span></li>
+            <li><strong>PS:</strong> <span>{{ car.details.horsePower  }}</span></li>
+            <li><strong>Mietpreis:</strong> <span>{{ car.details.price }}€</span></li>
+            <li><strong>Anzahl Sitze:</strong> <span>{{ car.details.seatsAmount }}</span></li>
+            <li><strong>Ort:</strong> <span>{{ car.details.placeOfRental }}</span></li>
           </ul>
         </div>
       </div>
