@@ -51,13 +51,9 @@ export class CarService {
    this.cars.splice(this.cars.indexOf(carToDelete),1);
   }
 
- 
-
-  updateCar(car: Car): void {
-    const index = this.cars.findIndex((c) => c.id === car.id);
-    if (index !== -1) {
-      this.cars[index] = car;
-    }
+  getCarById(carId:number){
+    return this.cars.find(car => car.id === carId);
+    
   }
 
 
